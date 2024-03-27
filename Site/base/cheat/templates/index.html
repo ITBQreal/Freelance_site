@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+{% block title %} Main page {% endblock %}
+<div>
+  <label class='chanel-label' for="chanel-select" style="color:#687fa2">Выберите канал:</label>
+  <select class = "my-selector" name="chanel" id="chanel-select">
+    <option value=""></option>
+    {% for chanel in chanels %}
+    <option>{{chanel.channel_name}}</option>
+    {% endfor %}
+  </select>
+</div>
+
+<div class="chanel_container">
+    <form method="POST" class="custom-form">
+      <fieldset>
+        {% csrf_token %}
+        {{ chanel_form.as_p }}
+        <button type="submit" class="btn btn-custom">Add chanel</button>
+      </fieldset>
+    </form>
+</div>
+
+<div class="stream_container">
+    <form method="POST" class="custom-form">
+      <fieldset>
+        {% csrf_token %}
+        {{ stream_form.as_p }}
+        <button type="submit" class="btn btn-custom">Add stream</button>
+      </fieldset>
+    </form>
+</div>
+
+
+<iframe width="560" height="315" src= {{ last_stream_url }} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% endblock %}

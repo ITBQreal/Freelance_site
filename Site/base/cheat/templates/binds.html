@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} Binds {% endblock %}
+{% block content %}
+<div class="bind_container">
+    <form method="POST" class="custom-form">
+      <fieldset>
+        {% csrf_token %}
+        {{ bind_form.as_p }}
+        <button type="submit" class="btn btn-custom">Add bind</button>
+      </fieldset>
+    </form>
+</div>
+
+{% endblock %}

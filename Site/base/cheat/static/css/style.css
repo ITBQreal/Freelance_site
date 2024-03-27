@@ -1,0 +1,62 @@
+body {
+  background-color: #233448;
+}
+div.chanel_container {
+    position: absolute;
+    top: 10%;
+    left: 170px;
+}
+div.stream_container {
+    position: absolute;
+    top: 10%;
+    left: 300px;
+}
+iframe {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn-custom {
+  background-color: #354056;
+  color: #92a4b4;
+  border-radius: 0;
+}
+.btn-custom:hover {
+    background-color: #354056;
+    color: #687fa2;
+    border: 1px solid #000000; /* Цвет рамки при наведении */
+}
+.custom-form input[type="text"] {
+    background-color: rgb(62, 83, 110);  /* Замените цвет на тот, который вы предпочитаете */
+    color: #7f92a4;  /* Цвет текста в поле ввода */
+    border: 1px solid #687fa2;  /* Цвет рамки */
+    padding: 5px;  /* Внутренний отступ */
+    width: 100px;
+    height: 25px;
+}
+.custom-form select {
+    background-color: rgb(62, 83, 110);  /* Замените цвет на тот, который вы предпочитаете */
+    color: #7f92a4;  /* Цвет текста в поле ввода */
+    border: 1px solid #687fa2;  /* Цвет рамки */
+    padding: 5px;  /* Внутренний отступ */
+    width: 150px;
+    height: 30px;
+}
+select.my-selector{
+    position: absolute;
+    background-color: rgb(62, 83, 110);
+    color: #7f92a4;
+    width: 120px;
+    top: 11%;
+    left: 1%;
+}
+label.chanel-label{
+    position: absolute;
+    left: 1%;
+    top: 60px;
+    font-size: 14px;
+}
+fieldset {
+    color: #7f92a4;
+}

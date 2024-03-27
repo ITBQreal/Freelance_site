@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} Bots {% endblock %}
+{% block content %}
+<h1 style="color: #7f92a4;"> BOTS PAGE</h1>
+<div class="bots_container">
+    <form method="POST" class="custom-form">
+      <fieldset>
+        {% csrf_token %}
+        {{ bot_form.as_p }}
+        <button type="submit" class="btn btn-custom">Add Bot</button>
+      </fieldset>
+    </form>
+</div>
+{% endblock %}
